@@ -32,7 +32,7 @@ const Nav = () => {
             height={30}
             className='object-contain logo'
             />
-            <p className='logo_text'>ToolsOfTomorrow</p> {/* This is the name of the company and will hide on small devices */}
+            <p className='logo_text'>Lunche</p> {/* This is the name of the company and will hide on small devices */}
       </Link>
       {/*Desktop Navigation*/ }
       <div className='sm:flex hidden'>
@@ -85,11 +85,30 @@ const Nav = () => {
                 onClick={()=>{setToggleDropdown((prev)=> !prev)}}/>
                 {toggleDropdown && (
                   <div className='dropdown'>
-                    <Link href={"/profile"}
+                    <Link href={"/menu"}
                           className='dropdown_link'
                           onClick={()=>{setToggleDropdown(false)}}>
-                    My profile
+                      Menu
                     </Link>
+                    <Link href={"/schedule"}
+                          className='dropdown_link'
+                          onClick={()=>{setToggleDropdown(false)}}>
+                    Schedule
+                    </Link>
+                    <Link href={"/about-us"}
+                          className='dropdown_link'
+                          onClick={()=>{setToggleDropdown(false)}}>
+                    About Us
+                    </Link>
+                    <button
+                      type='button'
+                      onClick={() => {
+                        setToggleDropdown(false)
+                        signOut();
+                        }}
+                      className='mt-5 w-full black_btn'>
+                        Order Now
+                    </button>
                   </div>
                 )}
           </div>

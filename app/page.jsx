@@ -1,18 +1,26 @@
 import Feed from "@components/Feed"
+import Image  from "next/image"
+import Subscription from "@components/Subscription"
 
 function Home() {
   return (
     <section className="w-full flex-center flex-col">
+        <Image
+              src="/icons/logo.png"
+              width={200}
+              height={400}
+              />
         <h1 className="head_text text-center">
-          Discover and Share
+          Lunch
+          <br />
           <br className="max-md:hidden"/>
-          <span className="orange_gradient text-center"> AI Powered Prompts</span>
+          <span className="orange_gradient text-center">Meal Prep</span>
         </h1>
-        <p className="desc text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, sit molestias magnam illum 
-          veritatis consequuntur voluptate iste sint quod accusamus eligendi alias molestiae, similique odio
-           quisquam autem vel nisi! Magni.
+        <p className="desc text-center">
+          Order homemade food from your cooworkers and 
+          and get rewards for subscibing
         </p>
-        <Feed/>
+        <Subscription/>
     </section>
   )
 }
