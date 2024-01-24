@@ -11,6 +11,7 @@ const Nav = () => {
   const isUserLoggedIn = true; // is it login?
 
   const [providers, setProviders] = useState(null);
+  const [toggleDropdown, setToggleDropdown] = useState(false)
 
   useEffect(()=>{
     const setProvider = async()=>{
@@ -31,7 +32,7 @@ const Nav = () => {
             height={30}
             className='object-contain logo'
             />
-            <p className='logo_text'>Promptopia</p> {/* This is the name of the company and will hide on small devices */}
+            <p className='logo_text'>ToolsOfTomorrow</p> {/* This is the name of the company and will hide on small devices */}
       </Link>
       {/*Desktop Navigation*/ }
       <div className='sm:flex hidden'>
@@ -70,6 +71,42 @@ const Nav = () => {
             })}
           </>
         )}
+      </div>
+      {/*Mobile navigation */}
+      <div className='sm:hidden flex relative'>
+        {isUserLoggedIn ? (
+          <div className='flex'>
+            <Image
+                src={"/icons/logo.png"}
+                width={37}
+                height={37}
+                className='rounded-full'
+                alt='profile'
+                onClick={()=>{setToggleDropdown((prev)=> !prev)}}/>
+                {toggleDropdown && (
+                  <div className='dropdown'>
+                    <Link href={"/profile"}
+                          className='dropdown_link'
+                          onClick={()=>{setToggleDropdown(false)}}>
+                    My profile
+                    </Link>
+                  </div>
+                )}
+          </div>
+        ):(
+          <>
+          {providers && Object.values(providers).map((provider)=>{
+              <button
+                type="button"
+                className='outline_btn'
+                onClick={()=>{signIn}}
+                key={provider.name}>
+
+              </button>
+            })}
+          </>          
+        )}
+
       </div>
 
     </nav>
