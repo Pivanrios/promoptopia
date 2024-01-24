@@ -3,8 +3,8 @@ import Nav from '@components/Nav'
 import Provider from '@components/Provider'
 
 export const metadata = {
-    title:"Prompropia",
-    description: "Discovery"
+    title:"ToolsOfTomorrow",
+    description: "Discovery of new and old technologies"
 }
 
 const RootLayout = ({children}) => {
