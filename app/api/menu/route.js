@@ -30,7 +30,8 @@ export const GET = async (req)=>{
                 id: 4,
                 name: "Pan Frances",
                 ingredientes: ["chile", "cebolla", "pollo" ],
-                price: 7
+                price: 7,
+                imageUrl:"/panfrances"
 
             }
         ]
