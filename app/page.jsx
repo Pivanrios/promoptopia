@@ -2,11 +2,13 @@ import Feed from "@components/Feed"
 import Image  from "next/image"
 import Subscription from "@components/Subscription"
 import Footer from "@components/Footer"
+import Slider from "@components/Slider"
 
 function Home() {
   return (
     <>
     <section className="w-full flex-center flex-col">
+        <Slider/>
         <Image
               src="/icons/rifa.jpeg"
               width={300}
