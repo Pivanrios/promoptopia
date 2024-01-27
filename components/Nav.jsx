@@ -4,23 +4,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
+
 
 
 const Nav = () => {
-  const isUserLoggedIn = true; // is it login?
-
-  const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false)
-
-  useEffect(()=>{
-    const setProvider = async()=>{
-      const res = await getProviders();
-      
-      setProviders(res);
-    }
-    setProvider();
-  },[]);
 
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
@@ -37,32 +25,18 @@ const Nav = () => {
       {/*---------------------Desktop Navigation----------------------*/ }
       <div className='sm:flex hidden'>
         {/*uses a condition to render depending on the user status */}
-        {isUserLoggedIn ? ( 
           <div className='flex gap-3 md:gap-5'>
             <ul 
                 className='flex gap-4 md:gap-5'>
               <Link href={"/menu"}>Menu</Link>
               <Link href={"/schedule"}>Schedule</Link>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/about-us"}>About Us</Link>
             </ul>
           </div>
-        ):(
-          <>
-            {providers && Object.values(providers).map((provider)=>{
-              <button
-                type="button"
-                className='outline_btn'
-                onClick={()=>{signIn}}
-                key={provider.name}>
-
-              </button>
-            })}
-          </>
-        )}
       </div>
       {/*-----------------------------Mobile navigation----------------------------- */}
       <div className='sm:hidden flex relative'>
-        {isUserLoggedIn ? (
+        
           <div className='flex'>
             <Image
                 src={"/icons/peter.png"}
@@ -100,19 +74,6 @@ const Nav = () => {
                   </div>
                 )}
           </div>
-        ):(
-          <>
-          {providers && Object.values(providers).map((provider)=>{
-              <button
-                type="button"
-                className='outline_btn'
-                onClick={()=>{signIn}}
-                key={provider.name}>
-
-              </button>
-            })}
-          </>          
-        )}
 
       </div>
 
