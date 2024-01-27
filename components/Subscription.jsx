@@ -2,13 +2,13 @@
 
 const Subscription = () => {
   return (
-    <section className="w-full flex-center flex-col ">
+    <section className="w-full flex flex-center flex-col ">
         <article className="w-full flex-center flex-col p-10">
                     <table 
                         className="w-full">
                         <thead>
                             <tr className="text-center w-full">
-                            <th colspan="2"
+                            <th colSpan="2"
                                 className=" border-b-2">Supscripciones</th>
                             </tr>
                         </thead>
