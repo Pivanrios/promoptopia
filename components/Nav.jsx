@@ -26,7 +26,7 @@ const Nav = () => {
     <nav className='flex-between w-full mb-16 pt-3'>
       <Link href="/" className='flex gap-2 flex-center'> {/*This link will take us to the home page and will be shaerd acrross all web */}
         <Image 
-            src={"/icons/logo.png"}
+            src={"/icons/peter.png"}
             alt="Logo"
             width={30}
             height={30}
@@ -34,29 +34,17 @@ const Nav = () => {
             />
             <p className='logo_text'>Lunche</p> {/* This is the name of the company and will hide on small devices */}
       </Link>
-      {/*Desktop Navigation*/ }
+      {/*---------------------Desktop Navigation----------------------*/ }
       <div className='sm:flex hidden'>
         {/*uses a condition to render depending on the user status */}
         {isUserLoggedIn ? ( 
           <div className='flex gap-3 md:gap-5'>
-            <Link href={"/create-prompt"}
-              className='black_btn'>
-              Create Post
-            </Link>
-            <button type='button'
-                    className='outline_btn'
-                    onClick={signOut}>          
-                    Sign Out
-            </button>
-
-            <Link href={"/profile"}>
-              <Image 
-                    src={"/icons/logo.png"}
-                    width={37}
-                    height={37}
-                    className='rounded-full'
-                    alt='profile'/>
-            </Link>
+            <ul 
+                className='flex gap-4 md:gap-5'>
+              <Link href={"/menu"}>Menu</Link>
+              <Link href={"/schedule"}>Schedule</Link>
+              <Link href={"/"}>Home</Link>
+            </ul>
           </div>
         ):(
           <>
@@ -72,7 +60,7 @@ const Nav = () => {
           </>
         )}
       </div>
-      {/*Mobile navigation */}
+      {/*-----------------------------Mobile navigation----------------------------- */}
       <div className='sm:hidden flex relative'>
         {isUserLoggedIn ? (
           <div className='flex'>
