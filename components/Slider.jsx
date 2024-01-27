@@ -14,12 +14,12 @@ const Slider = () => {
 
 
   return (
-    <section
+    <section className="full-w"
         >
             <Image
                 src={images[0]}
-                width={90}
-                height={90}
+                width={300}
+                height={300}
                 alt="Rifa"
                 
                 />
