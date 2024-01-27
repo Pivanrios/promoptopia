@@ -8,8 +8,8 @@ function Home() {
     <>
     <section className="w-full flex-center flex-col">
         <Image
-              src="/icons/logo.png"
-              width={200}
+              src="/icons/rifa.jpeg"
+              width={300}
               height={400}
               />
         <h1 className="head_text text-center">
