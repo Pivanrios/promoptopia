@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-
+import Product from "@components/Product"
 
 const menu = () => {
   const [dishes, setDishes] = useState([])
@@ -25,11 +25,17 @@ const menu = () => {
     <section>
         <h2 
         className="head_text text-center">
-            menu
+            MENU
         </h2>
         <div>
             {dishes.map((dish)=>(
-              <p key={dish.id}>{dish.name} precio: ${dish.price}.00</p>
+              <Product 
+                      key={dish.id}
+                      name={dish.name}
+                      price={dish.price}
+                      desc={dish.desc}
+                      imageUrl={dish.imageUrl}
+                      id={dish.id}/>
             ))}
 
 
