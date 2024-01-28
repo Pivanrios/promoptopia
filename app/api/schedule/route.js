@@ -9,21 +9,18 @@ export const GET = async (req) =>{
     const week = [
         {
             id:1,
-            dia: "miercoles",
-            platillo: "lasagna",
-            precio: 8
+            dia: "31",
+            platillos: [{name:"lasagna", precio:8}, {name: "hotcakes", precio:8}]
         },
         {
             id:2,
-            dia: "jueves",
-            platillo: "mole",
-            precio: 8
+            dia: "1",
+            platillos: [{name:"mole", precio:8}, {name: "burritos", precio:2}]
         },
         {
             id:3,
-            dia: "viernes",
-            platillo: "spaguetti",
-            precio: 7
+            dia: "2",
+            platillos: [{name:"spaguetti", precio:7}, {name: "pan frances", precio:7}]
         }
     ]
     console.log("week:", week);
