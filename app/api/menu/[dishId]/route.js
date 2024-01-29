@@ -28,7 +28,7 @@ const menu = [
     },
     {
         id: 4,
-        name: "pan Frances",
+        name: "pan frances",
         ingredientes: ["chile", "cebolla", "pollo" ],
         price: 7,
         imageUrl:"/panfrances",
