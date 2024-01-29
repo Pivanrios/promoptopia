@@ -9,7 +9,7 @@ export const GET = async (req)=>{
                 name: "lasagna",
                 ingredientes: ["tomate", "cebolla", "carne de res" ],
                 price: 8,
-                imageUrl: "/icons/peter.png",
+                imageUrl: `/images/lasagna.jpeg`,
                 desc: "This is a lasagna with meat and mushrums",
                 category: "Italian"
             },
@@ -18,7 +18,7 @@ export const GET = async (req)=>{
                 name: "rajas",
                 ingredientes: ["chile", "cebolla", "pollo" ],
                 price: 7,
-                imageUrl: "/icons/peter.png",
+                imageUrl: "/images/rajas.jpeg",
                 desc: "This is a lasagna with meat and mushrums",
                 category: "Mexican"
             },
@@ -27,7 +27,7 @@ export const GET = async (req)=>{
                 name: "hotcakes",
                 ingredientes: ["tomate", "cebolla", "carne de res" ],
                 price: 9,
-                imageUrl: "/icons/peter.png",
+                imageUrl: "/images/hotcakes.jpeg",
                 desc: "This is a lasagna with meat and mushrums",
                 category: "Breakfast"
             },
