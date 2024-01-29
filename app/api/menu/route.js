@@ -6,7 +6,7 @@ export const GET = async (req)=>{
         const menu = [
             {
                 id: 1,
-                name: "Lasagnas",
+                name: "lasagna",
                 ingredientes: ["tomate", "cebolla", "carne de res" ],
                 price: 8,
                 imageUrl: "/icons/peter.png",
@@ -24,7 +24,7 @@ export const GET = async (req)=>{
             },
             {
                 id: 3,
-                name: "Hotcakes",
+                name: "hotcakes",
                 ingredientes: ["tomate", "cebolla", "carne de res" ],
                 price: 9,
                 imageUrl: "/icons/peter.png",
@@ -33,7 +33,7 @@ export const GET = async (req)=>{
             },
             {
                 id: 4,
-                name: "Pan Frances",
+                name: "pan frances",
                 ingredientes: ["chile", "cebolla", "pollo" ],
                 price: 7,
                 imageUrl:"/panfrances",

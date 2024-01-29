@@ -29,10 +29,16 @@ const Schedule = () => {
             className='head_text text-center full-w'
         >Schedule</h2>
         <section className=" flex flex-row gap-2">
+          
         {days.map((day)=>(
-          <article>
-            <h5>{day.dia}</h5>
-            <span>{day.platillo} ${day.precio}.00</span>
+          <article className="flex flex-col border-2 p-3">
+            <p className="flex flex-end">{day.dia}</p>
+            <div className="flex flex-col gap-1">
+              {day.platillos.map((platillo)=>(
+                <span className="flex border-2 px-5"
+                >{platillo.name} ${platillo.precio}.00</span>
+              ))}
+            </div>
           </article>
         ))}
         </section>

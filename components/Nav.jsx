@@ -62,15 +62,6 @@ const Nav = () => {
                           onClick={()=>{setToggleDropdown(false)}}>
                     About Us
                     </Link>
-                    <button
-                      type='button'
-                      onClick={() => {
-                        setToggleDropdown(false)
-                        signOut();
-                        }}
-                      className='mt-5 w-full black_btn'>
-                        Order Now
-                    </button>
                   </div>
                 )}
           </div>
