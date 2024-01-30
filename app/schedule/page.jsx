@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react"
-
+import checkForDishes from "@utils/functions";
 
 const Schedule = () => {
   //save the days on a varibale
@@ -11,10 +11,18 @@ const Schedule = () => {
     //get our data
     const setData = async ()=>{
       try {
-        const res = await fetch("http://localhost:3000/api/schedule");
+        console.log("setting data...")
+        let res = await fetch("http://localhost:3000/api/menu");
+        const menu = await res.json();
+        console.log("menu:", menu);
+        res = await fetch("http://localhost:3000/api/schedule");
         const week = await res.json();
         console.log("Days:",week);
-        setDays(week);
+
+        const interseccion = checkForDishes(menu, week);
+        console.log("interseccion:", interseccion);
+
+        setDays(interseccion);
       } catch (error) {
         console.error
       }
@@ -29,18 +37,12 @@ const Schedule = () => {
             className='head_text text-center full-w'
         >Schedule</h2>
         <section className=" flex flex-row gap-2">
-          
-        {days.map((day)=>(
-          <article className="flex flex-col border-2 p-3">
-            <p className="flex flex-end">{day.dia}</p>
-            <div className="flex flex-col gap-1">
-              {day.platillos.map((platillo)=>(
-                <span className="flex border-2 px-5"
-                >{platillo.name} ${platillo.precio}.00</span>
-              ))}
-            </div>
-          </article>
-        ))}
+          {days.map((e)=>(
+            <article className="flex flex-row gap-1">
+              <h1>{e.name}</h1>
+              <p>{e.price}</p>
+            </article>
+          ))}
         </section>
     </section>
   )
