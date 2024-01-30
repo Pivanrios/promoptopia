@@ -16,8 +16,7 @@ const AboutUs = () => {
           <div className="flex flex-col p-3 gap-3">
             <h5 className="head_text text-center p-4">Community</h5>
               
-            <p>We believe that home made food is more tasty and healthy than frozen food in our workplace.
-              By overdoing lunch you can share your food with your coworkers and..
+            <p>We believe that home made food is more tasty and healthy than frozen food sold in our workplace.
              <a href="/about-us">here!</a> </p>
           </div>
           
