@@ -10,17 +10,17 @@ export const GET = async (req) =>{
         {
             id:1,
             dia: "31",
-            platillos: [{name:"lasagna", precio:8}, {name: "hotcakes", precio:8}]
+            platillos: ["lasagna","hotcakes"]
         },
         {
             id:2,
             dia: "1",
-            platillos: [{name:"mole", precio:8}, {name: "burritos", precio:2}]
+            platillos: ["mole", "burritos"]
         },
         {
             id:3,
             dia: "2",
-            platillos: [{name:"spaguetti", precio:7}, {name: "pan frances", precio:7}]
+            platillos: ["spaguetti","pan frances"]
         }
     ]
     console.log("week:", week);
