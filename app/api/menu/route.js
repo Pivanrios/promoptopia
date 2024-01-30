@@ -11,7 +11,7 @@ export const GET = async (req)=>{
                 price: 8,
                 imageUrl: `/images/lasagna.jpeg`,
                 desc: "This is a lasagna with meat and mushrums",
-                category: "Italian"
+                category: "pasta"
             },
             {
                 id: 2,
@@ -39,6 +39,30 @@ export const GET = async (req)=>{
                 imageUrl:"/panfrances",
                 desc: "This is a lasagna with meat and mushrums",
                 category: "Breakfast"
+            },{
+                id:5,
+                name: "spaguetti",
+                ingredientes:["Salsa Champ", "Cebolla", "Carne Molida de res"],
+                price: 7,
+                imageUrl:"/lasagna.jpeg",
+                desc:"This is a spaguetti a la bolonesa",
+                category:"pasta"
+            },{
+                id:6,
+                name: "mole",
+                ingredientes: ["dona maria", "pollo", "chocolate"],
+                price:8,
+                imageUrl:"/images/lasagna.jepg",
+                desc:"this is sweet mole with chocolate",
+                category:"mexican"
+            },{
+                id:7,
+                name: "burritos",
+                ingredientes: ["huevo", "jamon"],
+                price: 2,
+                imageUrl: "/images/lasagna.jpeg",
+                desc:"web it toes come ham on",
+                category:"breakfast"
             }
         ]
 
