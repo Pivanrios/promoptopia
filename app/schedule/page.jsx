@@ -34,24 +34,29 @@ const Schedule = () => {
   return (
     <section>
         <h2
-            className='head_text text-center full-w'
+            className='head_text text-center full-w pb-6'
         >Schedule</h2>
-        <section className=" flex flex-row gap-2">
+        <section className=" grid grid-rows-2 ">
+          <div className=" grid grid-cols-3 gap-3">
           {semana.map((e)=>(
-            <article key={e.dia}>
+            <article key={e.dia}
+                className=" border-2 bg-slate-500 p-2 rounded-md ">
               <p>{e.dia}</p>
-              <ul>
+              <ul className="flex flex-col gap-2">
               {e.platillos.map((dish)=>{
                 console.log("Inside platillos ", dish);
                 const plate = catalogo.find((f)=> f.name === dish);
                 console.log("plate:",plate);
                 return(
-                  <li key={plate.id}><span>{plate.name} ${plate.price}.00</span></li>
+                  <li key={plate.id}
+                      className="w-full bg-slate-400"><span
+                        >{plate.name} ${plate.price}.00</span></li>
                 )
               })}
               </ul>
             </article>
           ))}
+          </div>
         </section>
     </section>
   )

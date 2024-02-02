@@ -21,6 +21,21 @@ export const GET = async (req) =>{
             id:3,
             dia: "2",
             platillos: ["spaguetti","pan frances"]
+        },
+        {
+            id:4,
+            dia: "7",
+            platillos: []
+        },
+        {
+            id:5,
+            dia: "8",
+            platillos: ["mole", "burritos"]
+        },
+        {
+            id:6,
+            dia: "9",
+            platillos: ["spaguetti","pan frances"]
         }
     ]
     console.log("week:", week);
