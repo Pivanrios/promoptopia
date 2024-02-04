@@ -8,33 +8,25 @@ const Footer = () => {
         <ul
             className=' flex flex-row flex-center gap-3'>
             <li>
-                <Link href={"/"}>
-                    <Image
-                        src={'/icons/logo.png'}
-                        width={60}
-                        height={60}
-                        alt="Whatssap Logo"
-                    />
+                <Link href={"https://chat.whatsapp.com/I5vg82rHUSj3EUFToM6gtq"}>
+                    <div className=" bg-green-500 rounded-full h-10 w-10 ">
+                    
+                    </div>
                 </Link>
             </li>
             <li>
-                <Link href={"/"}>
-                    <Image
-                        src={'/icons/logo.png'}
-                        width={60}
-                        height={60}
-                        alt="Instgram"
-                    />
+                <Link href={"https://www.instagram.com/"}>
+                    <div
+                        className="bg-pink-400 rounded-md w-10 h-10">
+
+                    </div>
                 </Link>
             </li>
             <li>
-                <Link href={"/"}>
-                    <Image
-                        src={'/icons/logo.png'}
-                        width={60}
-                        height={60}
-                        alt="Linkedn"
-                    />
+                <Link href={"https://www.linkedin.com/in/pivanrios"}>
+                    <div className="bg-blue-500 rounded-md w-10 h-10">
+
+                    </div>
                 </Link>
             </li>
             
