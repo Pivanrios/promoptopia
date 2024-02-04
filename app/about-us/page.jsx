@@ -10,9 +10,11 @@ const AboutUs = () => {
         {/*-------------------------Desktop version ------------------------ */}
         <article className=" flex flex-row px-2 py-7" >
           <Image  
-                src={"/icons/peter.png"}
+                src={"/images/orders.jpeg"}
                 width={300}
-                height={300}/>
+                height={300}
+                alt="orders"
+                className="rounded-full"/>
           <div className="flex flex-col p-3 gap-3">
             <h5 className="head_text text-center p-4">Community</h5>
               
