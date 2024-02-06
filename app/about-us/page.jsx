@@ -2,13 +2,13 @@ import Image from "next/image"
 
 const AboutUs = () => {
   return (
-    <section>
+    <section className="flex flex-col justify-center">
         <h3
            className='head_text text-center' >
             About us
         </h3>
         {/*-------------------------Desktop version ------------------------ */}
-        <article className=" flex flex-row px-2 py-7" >
+        <article className=" flex flex-col sm:flex-row px-2 py-7 justify-center" >
           <Image  
                 src={"/images/orders.jpeg"}
                 width={300}
@@ -23,7 +23,7 @@ const AboutUs = () => {
           </div>
           
         </article>
-        <article className=" flex flex-row px-2 py-7" >
+        <article className=" flex flex-col sm:flex-row px-2 py-7" >
           <Image  
                 src={"/icons/peter.png"}
                 width={300}

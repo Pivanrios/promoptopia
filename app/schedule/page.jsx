@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react"
-
+import Calendar from "@components/Calendar";
 
 const Schedule = () => {
   //save the days on a varibale
@@ -36,28 +36,7 @@ const Schedule = () => {
         <h2
             className='head_text text-center full-w pb-6'
         >Schedule</h2>
-        <section className=" grid grid-rows-2 ">
-          <div className=" grid grid-cols-3 gap-3">
-          {semana.map((e)=>(
-            <article key={e.dia}
-                className=" border-2 bg-slate-500 p-2 rounded-md ">
-              <p>{e.dia}</p>
-              <ul className="flex flex-col gap-2">
-              {e.platillos.map((dish)=>{
-                console.log("Inside platillos ", dish);
-                const plate = catalogo.find((f)=> f.name === dish);
-                console.log("plate:",plate);
-                return(
-                  <li key={plate.id}
-                      className="w-full bg-slate-400"><span
-                        >{plate.name} ${plate.price}.00</span></li>
-                )
-              })}
-              </ul>
-            </article>
-          ))}
-          </div>
-        </section>
+        <Calendar/>
     </section>
   )
 }
